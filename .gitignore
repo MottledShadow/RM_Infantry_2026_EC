@@ -1,0 +1,56 @@
+# ============================
+# MDK-ARM / Keil 编译输出
+# ============================
+# 编译生成的临时文件夹
+Debug/
+Release/
+DebugConfig/
+RTE/
+
+# 编译中间文件 (分散在各个目录下)
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.htm
+*.lnp
+*.dep
+*.iex
+*.lst
+*.map
+*.build_log.htm
+*.uvguix.*          
+
+# Keil 特定的用户选项文件 (包含窗口位置、字体大小等，不要上传)
+*.uvoptx
+JLinkLog.txt
+JLinkSettings.ini
+
+# ============================
+# STM32CubeMX 生成的项目结构
+# ============================
+# 注意：CubeMX 每次重新生成代码时，会覆盖 Inc/ 和 Src/ 下的部分文件。
+# 以下目录里的文件基本都是 HAL 库和 CMSIS 驱动，通常直接从 CubeMX 生成，不需要手动修改。
+# 但如果你有自定义修改，请谨慎忽略（建议只跟踪自己额外添加的 BSP 文件）。
+Drivers/CMSIS/
+Drivers/STM32F4xx_HAL_Driver/   
+
+# 如果你确定完全使用 CubeMX 管理驱动，可以取消下一行的注释来忽略整个 Drivers 目录：
+# Drivers/
+
+# 但 CubeMX 生成的中间件文件需要保留（如 FreeRTOS、FatFs 配置），除非你不需要跟踪它们：
+# Middlewares/
+
+# ============================
+# 操作系统与编辑器杂项
+# ============================
+# Mac 文件夹属性
+.DS_Store
+
+# Windows 缩略图
+Thumbs.db
+
+# VS Code 配置 (如果也用它看代码)
+.vscode/
