@@ -29,18 +29,18 @@ JLinkLog.txt
 JLinkSettings.ini
 
 # ============================
-# STM32CubeMX 生成的项目结构
+# STM32CubeMX 生成的驱动
 # ============================
-# 注意：CubeMX 每次重新生成代码时，会覆盖 Inc/ 和 Src/ 下的部分文件。
-# 以下目录里的文件基本都是 HAL 库和 CMSIS 驱动，通常直接从 CubeMX 生成，不需要手动修改。
-# 但如果你有自定义修改，请谨慎忽略（建议只跟踪自己额外添加的 BSP 文件）。
-Drivers/CMSIS/
-Drivers/STM32F4xx_HAL_Driver/   
+# Drivers/（HAL + CMSIS）已纳入版本控制，这样别人 clone 后：
+#   无需安装 CubeMX、无需重新生成代码，
+#   直接用 Keil 打开 MDK-ARM/project.uvprojx 即可编译。
+# 如需重新生成，请用 CubeMX 6.16.0 + STM32Cube FW_F4 V1.28.3 打开 project.ioc。
+#
+# 若将来改为「完全由 CubeMX 管理、不把驱动入库」，取消下面两行注释即可：
+# Drivers/CMSIS/
+# Drivers/STM32F4xx_HAL_Driver/
 
-# 如果你确定完全使用 CubeMX 管理驱动，可以取消下一行的注释来忽略整个 Drivers 目录：
-# Drivers/
-
-# 但 CubeMX 生成的中间件文件需要保留（如 FreeRTOS、FatFs 配置），除非你不需要跟踪它们：
+# CubeMX 中间件（如启用 FreeRTOS / FatFs）同样建议入库：
 # Middlewares/
 
 # ============================
