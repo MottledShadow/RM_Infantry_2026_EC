@@ -338,7 +338,7 @@
               <MiscControls>--cpp11</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine/>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;./User</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../User/BSP;../User/Driver;../User/Algorithm;../User/Control;../User/App</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -398,92 +398,92 @@
             <File>
               <FileName>bsp.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp.h</FilePath>
+              <FilePath>..\User\BSP\bsp.h</FilePath>
             </File>
             <File>
               <FileName>bsp_debug.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\bsp_debug.c</FilePath>
+              <FilePath>..\User\BSP\bsp_debug.c</FilePath>
             </File>
             <File>
               <FileName>bsp_debug.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_debug.h</FilePath>
+              <FilePath>..\User\BSP\bsp_debug.h</FilePath>
             </File>
             <File>
               <FileName>bsp_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\bsp_uart.c</FilePath>
+              <FilePath>..\User\BSP\bsp_uart.c</FilePath>
             </File>
             <File>
               <FileName>bsp_uart.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_uart.h</FilePath>
+              <FilePath>..\User\BSP\bsp_uart.h</FilePath>
             </File>
             <File>
               <FileName>bsp_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\bsp_can.c</FilePath>
+              <FilePath>..\User\BSP\bsp_can.c</FilePath>
             </File>
             <File>
               <FileName>bsp_can.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_can.h</FilePath>
+              <FilePath>..\User\BSP\bsp_can.h</FilePath>
             </File>
             <File>
               <FileName>bsp_pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\bsp_pwm.c</FilePath>
+              <FilePath>..\User\BSP\bsp_pwm.c</FilePath>
             </File>
             <File>
               <FileName>bsp_pwm.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_pwm.h</FilePath>
+              <FilePath>..\User\BSP\bsp_pwm.h</FilePath>
             </File>
             <File>
               <FileName>bsp_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\bsp_gpio.c</FilePath>
+              <FilePath>..\User\BSP\bsp_gpio.c</FilePath>
             </File>
             <File>
               <FileName>bsp_gpio.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_gpio.h</FilePath>
+              <FilePath>..\User\BSP\bsp_gpio.h</FilePath>
             </File>
             <File>
               <FileName>BMI088Middleware.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\BMI088Middleware.c</FilePath>
+              <FilePath>..\User\BSP\BMI088Middleware.c</FilePath>
             </File>
             <File>
               <FileName>BMI088Middleware.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\BMI088Middleware.h</FilePath>
+              <FilePath>..\User\BSP\BMI088Middleware.h</FilePath>
             </File>
             <File>
               <FileName>BMI088reg.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\BMI088reg.h</FilePath>
+              <FilePath>..\User\BSP\BMI088reg.h</FilePath>
             </File>
             <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\filter.c</FilePath>
+              <FilePath>..\User\BSP\filter.c</FilePath>
             </File>
             <File>
               <FileName>filter.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\filter.h</FilePath>
+              <FilePath>..\User\BSP\filter.h</FilePath>
             </File>
             <File>
               <FileName>bsp_flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\bsp_flash.c</FilePath>
+              <FilePath>..\User\BSP\bsp_flash.c</FilePath>
             </File>
             <File>
               <FileName>bsp_flash.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\bsp_flash.h</FilePath>
+              <FilePath>..\User\BSP\bsp_flash.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -493,72 +493,72 @@
             <File>
               <FileName>dt7_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\dt7_driver.c</FilePath>
+              <FilePath>..\User\Driver\dt7_driver.c</FilePath>
             </File>
             <File>
               <FileName>dt7_driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\dt7_driver.h</FilePath>
+              <FilePath>..\User\Driver\dt7_driver.h</FilePath>
             </File>
             <File>
               <FileName>motor_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\motor_driver.c</FilePath>
+              <FilePath>..\User\Driver\motor_driver.c</FilePath>
             </File>
             <File>
               <FileName>motor_driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\motor_driver.h</FilePath>
+              <FilePath>..\User\Driver\motor_driver.h</FilePath>
             </File>
             <File>
               <FileName>rsi_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\rsi_driver.c</FilePath>
+              <FilePath>..\User\Driver\rsi_driver.c</FilePath>
             </File>
             <File>
               <FileName>rsi_driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\rsi_driver.h</FilePath>
+              <FilePath>..\User\Driver\rsi_driver.h</FilePath>
             </File>
             <File>
               <FileName>vtm_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\vtm_driver.c</FilePath>
+              <FilePath>..\User\Driver\vtm_driver.c</FilePath>
             </File>
             <File>
               <FileName>vtm_driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\vtm_driver.h</FilePath>
+              <FilePath>..\User\Driver\vtm_driver.h</FilePath>
             </File>
             <File>
               <FileName>BMI088driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\BMI088driver.c</FilePath>
+              <FilePath>..\User\Driver\BMI088driver.c</FilePath>
             </File>
             <File>
               <FileName>BMI088driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\BMI088driver.h</FilePath>
+              <FilePath>..\User\Driver\BMI088driver.h</FilePath>
             </File>
             <File>
               <FileName>gyro_calibration.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\gyro_calibration.c</FilePath>
+              <FilePath>..\User\Driver\gyro_calibration.c</FilePath>
             </File>
             <File>
               <FileName>gyro_calibration.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\gyro_calibration.h</FilePath>
+              <FilePath>..\User\Driver\gyro_calibration.h</FilePath>
             </File>
             <File>
               <FileName>referee_protocol.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\referee_protocol.c</FilePath>
+              <FilePath>..\User\Driver\referee_protocol.c</FilePath>
             </File>
             <File>
               <FileName>referee_protocol.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\referee_protocol.h</FilePath>
+              <FilePath>..\User\Driver\referee_protocol.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -568,42 +568,42 @@
             <File>
               <FileName>lpf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\lpf.c</FilePath>
+              <FilePath>..\User\Algorithm\lpf.c</FilePath>
             </File>
             <File>
               <FileName>lpf.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\lpf.h</FilePath>
+              <FilePath>..\User\Algorithm\lpf.h</FilePath>
             </File>
             <File>
               <FileName>key_scan.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\key_scan.c</FilePath>
+              <FilePath>..\User\Algorithm\key_scan.c</FilePath>
             </File>
             <File>
               <FileName>key_scan.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\key_scan.h</FilePath>
+              <FilePath>..\User\Algorithm\key_scan.h</FilePath>
             </File>
             <File>
               <FileName>pid.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\pid.c</FilePath>
+              <FilePath>..\User\Algorithm\pid.c</FilePath>
             </File>
             <File>
               <FileName>pid.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\pid.h</FilePath>
+              <FilePath>..\User\Algorithm\pid.h</FilePath>
             </File>
             <File>
               <FileName>crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\crc.c</FilePath>
+              <FilePath>..\User\Algorithm\crc.c</FilePath>
             </File>
             <File>
               <FileName>crc.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\crc.h</FilePath>
+              <FilePath>..\User\Algorithm\crc.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -613,52 +613,52 @@
             <File>
               <FileName>gimbal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\gimbal.c</FilePath>
+              <FilePath>..\User\Control\gimbal.c</FilePath>
             </File>
             <File>
               <FileName>gimbal.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\gimbal.h</FilePath>
+              <FilePath>..\User\Control\gimbal.h</FilePath>
             </File>
             <File>
               <FileName>friction_wheel.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\friction_wheel.c</FilePath>
+              <FilePath>..\User\Control\friction_wheel.c</FilePath>
             </File>
             <File>
               <FileName>friction_wheel.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\friction_wheel.h</FilePath>
+              <FilePath>..\User\Control\friction_wheel.h</FilePath>
             </File>
             <File>
               <FileName>heat_control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\heat_control.c</FilePath>
+              <FilePath>..\User\Control\heat_control.c</FilePath>
             </File>
             <File>
               <FileName>heat_control.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\heat_control.h</FilePath>
+              <FilePath>..\User\Control\heat_control.h</FilePath>
             </File>
             <File>
               <FileName>shooter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\shooter.c</FilePath>
+              <FilePath>..\User\Control\shooter.c</FilePath>
             </File>
             <File>
               <FileName>shooter.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\shooter.h</FilePath>
+              <FilePath>..\User\Control\shooter.h</FilePath>
             </File>
             <File>
               <FileName>chassis.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\chassis.c</FilePath>
+              <FilePath>..\User\Control\chassis.c</FilePath>
             </File>
             <File>
               <FileName>chassis.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\chassis.h</FilePath>
+              <FilePath>..\User\Control\chassis.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -668,42 +668,42 @@
             <File>
               <FileName>DT7.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\DT7.c</FilePath>
+              <FilePath>..\User\App\DT7.c</FilePath>
             </File>
             <File>
               <FileName>DT7.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\DT7.h</FilePath>
+              <FilePath>..\User\App\DT7.h</FilePath>
             </File>
             <File>
               <FileName>VTM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\VTM.c</FilePath>
+              <FilePath>..\User\App\VTM.c</FilePath>
             </File>
             <File>
               <FileName>VTM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\VTM.h</FilePath>
+              <FilePath>..\User\App\VTM.h</FilePath>
             </File>
             <File>
               <FileName>referee_ui.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\referee_ui.c</FilePath>
+              <FilePath>..\User\App\referee_ui.c</FilePath>
             </File>
             <File>
               <FileName>referee_ui.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\referee_ui.h</FilePath>
+              <FilePath>..\User\App\referee_ui.h</FilePath>
             </File>
             <File>
               <FileName>app.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\User\app.c</FilePath>
+              <FilePath>..\User\App\app.c</FilePath>
             </File>
             <File>
               <FileName>app.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\User\app.h</FilePath>
+              <FilePath>..\User\App\app.h</FilePath>
             </File>
           </Files>
         </Group>

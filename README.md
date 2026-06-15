@@ -52,7 +52,11 @@ git clone <your-repo-url>
 
 1. 用 **CubeMX 6.16.0** 打开 `project.ioc`（确保已安装 **FW_F4 V1.28.3**）；
 2. 修改配置后点击 `GENERATE CODE`；
-3. 重新生成只会改动 `Core/` 和 `Drivers/`，`MDK-ARM/User/` 下的业务代码不受影响。
+3. 重新生成只会改动 `Core/` 和 `Drivers/`，`User/` 下的业务代码不受影响。
+
+> ⚠️ CubeMX 重新生成后，偶尔会重置 Keil 的头文件搜索路径。若重新生成后编译报「找不到头文件」，
+> 请到 `Options for Target → C/C++ → Include Paths` 确认以下 5 个路径仍在：
+> `../User/BSP`、`../User/Driver`、`../User/Algorithm`、`../User/Control`、`../User/App`。
 
 ## 软件架构
 
@@ -74,18 +78,23 @@ HAL/CMSIS Core/ + Drivers/（CubeMX 生成）
 
 控制循环由 **TIM1（1ms）** 中断驱动，依次调用 `Gimbal_Control / Chassis_Control /
 Shooter_Control`。初始化顺序约束（IMU 标定、裁判系统握手、摩擦轮电调握手等）
-全部集中在 [`MDK-ARM/User/app.c`](MDK-ARM/User/app.c)，内有详细中文注释。
+全部集中在 [`User/App/app.c`](User/App/app.c)，内有详细中文注释。
 
 ## 目录结构
 
 ```
 RM_Infantry_2026/
+├── User/                 # ★ 全部业务代码（按架构分层）
+│   ├── BSP/             # 板级支持：CAN/UART/PWM/GPIO/Flash + IMU 中间层
+│   ├── Driver/          # 设备驱动：遥控器/裁判系统/图传/电机/BMI088
+│   ├── Algorithm/       # 通用算法：PID/低通滤波/CRC/按键扫描
+│   ├── Control/         # 运动控制：云台/底盘/发射/摩擦轮/热量
+│   └── App/             # 应用层：App_Init 初始化入口 / 裁判系统 UI
 ├── Core/                 # CubeMX 生成：main、外设初始化、中断、HAL 配置
 ├── Drivers/              # CubeMX 生成：HAL 库 + CMSIS（已入库）
 ├── MDK-ARM/
-│   ├── project.uvprojx   # Keil 工程文件
-│   ├── startup_*.s       # 启动文件
-│   └── User/             # ★ 全部业务代码（BSP / 驱动 / 控制 / 应用）
+│   ├── project.uvprojx   # Keil 工程文件（含 ../User/* 引用与搜索路径）
+│   └── startup_*.s       # 启动文件
 ├── project.ioc           # CubeMX 工程配置（硬件唯一真源）
 ├── .gitignore
 ├── LICENSE
