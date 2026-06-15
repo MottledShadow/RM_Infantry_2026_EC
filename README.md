@@ -12,7 +12,7 @@ RoboMaster 2026 赛季步兵机器人下位机控制固件，基于 STM32F407 + 
 
 | 项目     | 说明                                              |
 | -------- | ------------------------------------------------- |
-| 主控     | STM32F407IGHx（大疆 RoboMaster A 型开发板）        |
+| 主控     | STM32F407IGHx（大疆 RoboMaster C 型开发板）        |
 | IMU      | BMI088（SPI1）                                     |
 | 遥控器   | DT7/DR16（DBUS，USART3）                           |
 | 裁判系统 | RM 裁判系统串口（USART6）                          |
@@ -32,6 +32,7 @@ RoboMaster 2026 赛季步兵机器人下位机控制固件，基于 STM32F407 + 
 > 若你的 Keil 编译报大量错误，请确认已安装 AC5，或在
 > `Options for Target → Target → ARM Compiler` 中切换并迁移到 AC6。
 
+<<<<<<< HEAD
 ## 快速开始
 
 ### 方式一：直接编译（推荐，无需 CubeMX）
@@ -58,6 +59,8 @@ git clone <your-repo-url>
 > 请到 `Options for Target → C/C++ → Include Paths` 确认以下 5 个路径仍在：
 > `../User/BSP`、`../User/Driver`、`../User/Algorithm`、`../User/Control`、`../User/App`。
 
+=======
+>>>>>>> d3eeafb4d3db6ff019e665a574fac925df573e83
 ## 软件架构
 
 ```
@@ -93,8 +96,14 @@ RM_Infantry_2026/
 ├── Core/                 # CubeMX 生成：main、外设初始化、中断、HAL 配置
 ├── Drivers/              # CubeMX 生成：HAL 库 + CMSIS（已入库）
 ├── MDK-ARM/
+<<<<<<< HEAD
 │   ├── project.uvprojx   # Keil 工程文件（含 ../User/* 引用与搜索路径）
 │   └── startup_*.s       # 启动文件
+=======
+│   ├── project.uvprojx   # Keil 工程文件
+│   ├── startup_*.s       # 启动文件
+│   └── User/             # 全部业务代码（BSP / 驱动 / 控制 / 应用）
+>>>>>>> d3eeafb4d3db6ff019e665a574fac925df573e83
 ├── project.ioc           # CubeMX 工程配置（硬件唯一真源）
 ├── .gitignore
 ├── LICENSE
@@ -112,11 +121,6 @@ RM_Infantry_2026/
 | USART1     | 图传 VTM                      |
 | USART3     | 遥控器 DT7（DBUS）            |
 | USART6     | 裁判系统                      |
-
-## 贡献
-
-欢迎 Issue 与 PR。提交前请保持现有分层结构与中文注释风格一致；若改动了硬件配置，
-请同步提交更新后的 `project.ioc`，并在 PR 说明中注明所用的 CubeMX / 固件包版本。
 
 ## License
 
