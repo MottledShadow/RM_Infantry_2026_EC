@@ -1,4 +1,4 @@
-# RM_Infantry_2026
+# RM_Infantry_2026_EC
 
 RoboMaster 2026 赛季步兵机器人下位机控制固件，基于 STM32F407 + HAL 库。
 
